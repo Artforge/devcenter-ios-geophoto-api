@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
-
+gem 'rails', '3.2.3'
+gem 'mysql2'
 gem 'paperclip'
 gem 'aws-sdk'
 
-gem 'thin'
+# gem 'thin'
 
 group :development do
-  gem 'sqlite3'
+  
 end
 
 group :production do
-  gem 'pg'
+  
 end
