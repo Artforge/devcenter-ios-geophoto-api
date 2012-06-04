@@ -2,9 +2,7 @@ class Photo < ActiveRecord::Base
   COORDINATE_DELTA = 0.05
 
   has_attached_file :image,
-                    :styles => { :thumbnail => "100x100#" },
-                    :storage => :s3,
-                    :s3_credentials => S3_CREDENTIALS
+                    :styles => { :thumbnail => "100x100#" }
 
   validates :image,
             :presence => true
