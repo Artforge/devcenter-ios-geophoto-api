@@ -23,8 +23,8 @@ class Photo < ActiveRecord::Base
       :lng => self.lng,
 
       :image_urls => {
-        :original => self.image.url,
-        :thumbnail => self.image.url(:thumbnail)
+        :original => "http://geophoto.artforge.com#{self.image.url}",
+        :thumbnail => "http://geophoto.artforge.com#{self.image.url(:thumbnail)}"
       },
 
       :created_at => self.created_at.iso8601
